@@ -68,6 +68,69 @@
       overflow-x: hidden;
       transition: background-color 0.3s ease;
     }
+    /* تنسيق شريط بيانات الطالبة والإشراف */
+.academic-credit-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  background: linear-gradient(135deg, #ffffff, var(--bg-accent-soft));
+  border: 1px solid #99f6e4;
+  border-right: 5px solid var(--primary);
+  border-radius: var(--radius-md);
+  padding: 1rem 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow-sm);
+}
+
+html[dir="ltr"] .academic-credit-card {
+  border-right: 1px solid #99f6e4;
+  border-left: 5px solid var(--primary);
+}
+
+.credit-item {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.credit-icon {
+  font-size: 1.6rem;
+  background: #ffffff;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(13, 148, 136, 0.12);
+  border: 1px solid var(--border-color);
+}
+
+.credit-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.credit-name {
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--primary-dark);
+}
+
+.credit-divider {
+  width: 1px;
+  height: 38px;
+  background: var(--border-strong);
+}
+
+@media (max-width: 768px) {
+  .credit-divider { display: none; }
+  .academic-credit-card { justify-content: flex-start; }
+}
 
     /* Bilingual Display Logic */
     html[lang="ar"] .lang-en { display: none !important; }
@@ -322,6 +385,8 @@
       background: var(--secondary);
       color: #ffffff;
     }
+    
+    
 
     /* Callout Boxes */
     .clinical-callout {
@@ -773,11 +838,56 @@
             </span>
           </div>
           <h1 class="slide-title">
-            <span class="lang-ar">ما هي الـ Actinomycetes؟ (القصة من البداية لمن لم يدرس الأحياء)</span>
+            <span class="lang-ar">ما هي الـ Actinomycetes؟ (القصة من البداية )</span>
             <span class="lang-en">What are Actinomycetes? (From Scratch to Fundamental Biology)</span>
           </h1>
         </div>
       </div>
+      <!-- ==========================================
+     شريط بيانات الطالبة والإشراف الأكاديمي
+     ========================================== -->
+<div class="academic-credit-card">
+  <div class="credit-item">
+    <span class="credit-icon">👩‍🔬</span>
+    <div>
+      <div class="credit-label">
+        <span class="lang-ar">إعداد الطالبة:</span>
+        <span class="lang-en">Student Name:</span>
+      </div>
+      <div class="credit-name">خلود فرج إبراهيم</div>
+    </div>
+  </div>
+
+  <div class="credit-divider"></div>
+
+  <div class="credit-item">
+    <span class="credit-icon">🩺</span>
+    <div>
+      <div class="credit-label">
+        <span class="lang-ar">تحت إشراف:</span>
+        <span class="lang-en">Supervised by:</span>
+      </div>
+      <div class="credit-name">د. أسماء سيد (Dr. Asmaa Sayed)</div>
+    </div>
+  </div>
+
+  <div class="credit-divider"></div>
+
+  <div class="credit-item">
+    <span class="credit-icon">🏛️</span>
+    <div>
+      <div class="credit-label">
+        <span class="lang-ar">الجهة الأكاديمية:</span>
+        <span class="lang-en">Institution:</span>
+      </div>
+      <div class="credit-name">
+        <span class="lang-ar">كلية الزراعة — جامعة أسوان</span>
+        <span class="lang-en">Faculty of Agriculture — Aswan University</span>
+      </div>
+    </div>
+  </div>
+</div>
+
 
       <div class="clinical-callout">
         <strong>
